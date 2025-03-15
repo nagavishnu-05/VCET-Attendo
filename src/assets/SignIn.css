@@ -1,0 +1,111 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body, html {
+        width: 100%;
+        height: auto;
+        background: radial-gradient(circle at 0% 0%, #2f356d, #b97db3);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #signin-logo {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        position: absolute;
+        top: 3%;
+        left: 2%;
+    }
+
+    #signin-college-name {
+        font-size: 30px;
+        position: absolute;
+        top: 2%;
+        left: 9%;
+    }
+
+    #signin-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        justify-content: flex-start;
+        height: 100vh;
+        padding: 50px;
+    }
+
+    #signin-form {
+        width: 400px;
+        height: auto;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 15px;
+        display: flex;
+        position: absolute;
+        top: 28%;
+        left: 35%;
+        flex-direction: column;
+        justify-content: flex-start;
+        border: 2px solid white;
+    }
+
+    #signin-fieldset {
+        width: 100%;
+        border: none;
+    }
+
+    #signin-legend {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #signin-fieldset label {
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 10px;
+        display: block;
+        text-align: left;
+    }
+
+    #signin-username, 
+    #signin-password {
+        width: 90%;
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid white;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        outline: none;
+        margin-top: 5px;
+    }
+
+    #signin-username::placeholder, 
+    #signin-password::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    #signin-submit {
+        width: 160px;
+        height: 40px;
+        background-color: white;
+        color: #13072e;
+        font-size: 18px;
+        font-weight: 600;
+        border: 2px solid white;
+        border-radius: 20px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    #signin-submit:hover {
+        background-color: #3f2182;
+        color: white;
+        border-color: #3f2182;
+    }

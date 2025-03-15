@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body, html {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 0% 0%, #2f356d, #b97db3);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+/* Container */
+#attendance-container {
+    width: 100%;
+    max-width: 1420px;
+    min-width: 600px;
+    min-height: 400px;
+    padding-top: 20px;
+    margin-top: 5%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    top: 150px;
+}
+
+/* College Logo */
+#attendance-vcet-logo {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+
+#attendance-college-name {
+    font-size: 30px;
+    position: absolute;
+    top: 2%;
+    left: 9%;
+}
+
+/* Header */
+#attendance-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Title */
+#attendance-title {
+    font-size: 26px;
+    margin: 15px 0;
+}
+
+/* Staff & Section */
+#attendance-staff, 
+#attendance-section {
+    font-size: 24px;
+    position: relative;
+}
+
+/* Controls */
+#attendance-controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+#attendance-markall, 
+#attendance-submit {
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    color: #13072e;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+#attendance-markall{
+    position: absolute;
+    top: 30%;
+    left: 2%;
+}
+
+#attendance-submit{
+    position: absolute;
+    top: 30%;
+    left: 80%;
+}
+
+#attendance-markall:hover, 
+#attendance-submit:hover {
+    background-color: #3f2182;
+    color: white;
+    border-color: #3f2182;
+}
+
+/* Table Container */
+#attendance-table-container {
+    width: 98%;
+    max-width: 1350px;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    max-height: 500px; /* Prevent table from overflowing */
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: scroll !important;
+}
+
+/* Table */
+#attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+}
+
+#attendance-table th, 
+#attendance-table td {
+    padding: 12px;
+    border: 2px solid white;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#attendance-table th {
+    background-color: #3f2182;
+    color: white;
+    font-weight: bold;
+}
+
+#attendance-table td {
+    background: rgba(255, 255, 255, 0.1);
+    min-width: 150px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+#attendance-table input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #attendance-container {
+        width: 95%;
+    }
+
+    #attendance-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #attendance-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #attendance-markall, 
+    #attendance-submit {
+        width: 100%;
+    }
+
+    #attendance-table-container {
+        width: 100%;
+        overflow-x: scroll;
+    }
+}

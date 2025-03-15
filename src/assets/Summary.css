@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body, html {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 0% 0%, #2f356d, #b97db3);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#summary-container {
+    width: 90%; /* Adjust width to fit smaller screens */
+    max-width: 1420px;
+    min-width: 300px; /* Allow it to shrink on mobile */
+    max-height: 80vh; /* Limits max height */
+    padding: 20px;
+    margin-top: 8%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Enables scrolling when needed */
+}
+
+#summary-vcet-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+
+#summary-college-name {
+    font-size: 24px; /* Slightly smaller for mobile */
+    position: absolute;
+    top: 2%;
+    left: 9%;
+}
+
+#summary-title {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+#summary-staff, #summary-section {
+    font-size: 18px; /* Smaller text for mobile */
+}
+
+#summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px; /* Smaller font size for readability on mobile */
+}
+
+#summary-table th, 
+#summary-table td {
+    padding: 12px;
+    border: 2px solid white;
+    white-space: nowrap;
+}
+
+#summary-table th {
+    background-color: #3f2182;
+}
+
+#summary-table td {
+    min-width: 120px; /* Adjusted for smaller screens */
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+#summary-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Ensure buttons stack on smaller screens */
+}
+
+#summary-back, 
+#summary-whatsapp, 
+#summary-pdf {
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    color: #13072e;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    margin-bottom: 10px; /* Add spacing between buttons */
+}
+
+#summary-back:hover, 
+#summary-whatsapp:hover, 
+#summary-pdf:hover {
+    background-color: #3f2182;
+    color: white;
+    border-color: #3f2182;
+}
+
+/* Responsive Design for mobile */
+@media screen and (max-width: 768px) {
+    body, html {
+        display: block;
+        height: auto; /* Allow body to be dynamic on smaller screens */
+        padding: 20px; /* Add some padding to the body */
+    }
+
+    #summary-container {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 5%;
+        padding: 15px; /* Reduce padding */
+    }
+
+    #summary-vcet-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    #summary-college-name {
+        font-size: 22px; /* Smaller font for mobile */
+    }
+
+    #summary-title {
+        font-size: 20px; /* Smaller font size */
+    }
+
+    #summary-staff, #summary-section {
+        font-size: 16px; /* Adjust text size */
+    }
+
+    #summary-table {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    #summary-table th, 
+    #summary-table td {
+        padding: 10px;
+    }
+
+    #summary-controls {
+        flex-direction: column; /* Stack controls vertically */
+        gap: 10px;
+    }
+
+    #summary-back, #summary-whatsapp, #summary-pdf {
+        width: 100%; /* Make buttons full width on mobile */
+    }
+}
